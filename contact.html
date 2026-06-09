@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — AiFi Audience Vaults</title>
+<link rel="icon" type="image/webp" href="assets/aifi-logo.webp">
+<meta name="description" content="Get in touch with the AiFi Audience Vaults team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400&family=Space+Mono:wght@400;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#05080f;--ink-2:#0a1020;--panel:#0e1628;--panel-2:#121d35;
+    --line:rgba(120,160,255,.14);--line-2:rgba(120,160,255,.28);
+    --txt:#e8eefc;--txt-dim:#9fb0d4;--txt-faint:#5e6f96;
+    --acc:#4fd6c8;--acc-2:#6b8cff;--acc-3:#c9a44b;--maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--txt);font-family:'Sora',system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(900px 600px at 12% -5%,rgba(107,140,255,.16),transparent 60%),radial-gradient(800px 700px at 95% 8%,rgba(79,214,200,.12),transparent 55%),radial-gradient(1000px 900px at 50% 110%,rgba(201,164,75,.08),transparent 60%),var(--ink)}
+  body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-image:linear-gradient(rgba(120,160,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,255,.045) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 25%,#000,transparent 80%);mask-image:radial-gradient(ellipse 90% 70% at 50% 25%,#000,transparent 80%)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  h1,h2{font-family:'Fraunces',serif;line-height:1.05;letter-spacing:-.01em;font-weight:500}
+  h1 em{font-style:italic;color:var(--acc);font-weight:400}
+
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:linear-gradient(180deg,rgba(5,8,15,.85),rgba(5,8,15,.4));border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:var(--maxw);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:19px;letter-spacing:-.02em}
+  .logo-img{height:26px;width:auto;display:block}
+  .brand-sep{position:relative;padding-left:13px;font-weight:600;font-size:16px;color:var(--txt-dim)}
+  .brand-sep::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:18px;background:var(--line-2)}
+  @media(max-width:520px){.brand-sep{display:none}}
+  .nav-cta{font-size:13.5px;font-weight:600;color:var(--ink);background:linear-gradient(135deg,var(--acc),var(--acc-2));padding:9px 18px;border-radius:999px;box-shadow:0 8px 24px -8px rgba(79,214,200,.5);transition:transform .2s,box-shadow .2s}
+  .nav-cta:hover{transform:translateY(-1px)}
+
+  main{flex:1;padding:70px 0 90px}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);border:1px solid var(--line-2);border-radius:999px;padding:7px 15px;margin-bottom:24px;background:rgba(79,214,200,.05)}
+  h1{font-size:clamp(34px,5vw,56px)}
+  .intro{color:var(--txt-dim);font-size:17px;margin:22px 0 30px;max-width:440px}
+  .contact-meta{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+  .meta-row{display:flex;align-items:center;gap:13px;color:var(--txt-dim);font-size:15px}
+  .meta-row .ic{color:var(--acc);flex-shrink:0}
+  .meta-row a:hover{color:var(--txt)}
+
+  .form-card{border:1px solid var(--line-2);border-radius:24px;padding:40px;background:linear-gradient(165deg,var(--panel),var(--ink));box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+  .field{margin-bottom:22px}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--txt-dim);margin-bottom:9px;text-transform:uppercase;letter-spacing:.06em}
+  .field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line-2);border-radius:12px;color:var(--txt);font-family:inherit;font-size:15.5px;padding:13px 15px;transition:border-color .2s}
+  .field textarea{resize:vertical;min-height:130px;line-height:1.55}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--acc)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:480px){.field-row{grid-template-columns:1fr}}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;padding:15px 28px;border-radius:14px;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s;font-family:inherit;color:var(--ink);background:linear-gradient(135deg,var(--acc),var(--acc-2));box-shadow:0 14px 36px -12px rgba(79,214,200,.6);width:100%;justify-content:center}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 20px 44px -12px rgba(79,214,200,.75)}
+  .hide{display:none}
+  .thanks{border:1px solid var(--line-2);border-radius:24px;padding:48px 40px;background:linear-gradient(165deg,rgba(79,214,200,.08),rgba(107,140,255,.06));text-align:center}
+  .thanks h2{font-size:30px;margin-bottom:12px}
+  .thanks h2 em{font-style:italic;color:var(--acc)}
+  .thanks p{color:var(--txt-dim)}
+
+  footer{border-top:1px solid var(--line);padding:36px 0}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot-back{color:var(--txt-faint);font-size:14px}
+  .foot-back:hover{color:var(--txt)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-img" src="assets/aifi-logo.webp" alt="AiFi" width="64" height="26">
+      <span class="brand-sep">Audience Vaults</span>
+    </a>
+    <a class="nav-cta" href="index.html#calculator">See What Your Audience Is Worth</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow">Get In Touch</span>
+        <h1>Let's talk about your <em>audience.</em></h1>
+        <p class="intro">Whether you're an association, membership group, MLS, financial institution, or enterprise — tell us about your audience and we'll show you what it's worth.</p>
+        <div class="contact-meta">
+          <div class="meta-row"><span class="ic">✉</span><a href="mailto:hello@aifi.co">hello@aifi.co</a></div>
+          <div class="meta-row"><span class="ic">◈</span><a href="https://aifi.co" target="_blank" rel="noopener">aifi.co</a></div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Netlify Forms: the data-netlify attribute wires this up automatically when hosted on Netlify -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#thanks" class="form-card" id="contactForm">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hide"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="company">Organization</label>
+              <input type="text" id="company" name="company">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="size">Audience Size</label>
+              <select id="size" name="audience_size">
+                <option value="">Select…</option>
+                <option>Under 50,000</option>
+                <option>50,000 – 250,000</option>
+                <option>250,000 – 1M</option>
+                <option>1M – 5M</option>
+                <option>5M+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your audience and what you're looking to do…"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message →</button>
+        </form>
+
+        <div class="thanks hide" id="thanks">
+          <h2>Thanks — <em>we'll be in touch.</em></h2>
+          <p>Your message is on its way to the AiFi team. We'll get back to you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a class="brand" href="index.html"><img class="logo-img" src="assets/aifi-logo.webp" alt="AiFi" width="58" height="23"><span class="brand-sep">Audience Vaults</span></a>
+      <a class="foot-back" href="index.html">← Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Show inline thank-you on successful submit. On Netlify, the POST is handled
+  // server-side; we intercept with fetch so the user stays on the page.
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try{
+      await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString()});
+    }catch(err){ /* if running locally without Netlify, still show thanks */ }
+    form.classList.add('hide');
+    document.getElementById('thanks').classList.remove('hide');
+    document.getElementById('thanks').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+</script>
+</body>
+</html>
