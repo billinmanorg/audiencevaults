@@ -118,8 +118,28 @@
   .float{animation:float 7s ease-in-out infinite}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 
+  /* ---------- FOMO / DO NOTHING ---------- */
+  .fomo{border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(40,16,28,.35),rgba(8,12,22,.5))}
+  .fomo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;padding:78px 0}
+  @media(max-width:860px){.fomo-grid{grid-template-columns:1fr;gap:32px;padding:60px 0}}
+  .fomo h2{font-size:clamp(28px,3.8vw,42px)}
+  .fomo h2 em{font-style:italic;color:#ff7a8a}
+  .fomo-lead{color:var(--txt-dim);font-size:16px;margin-top:16px}
+  .fomo-list{display:flex;flex-direction:column;gap:14px}
+  .fomo-item{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(255,122,138,.2);border-radius:14px;padding:18px 20px;background:rgba(40,16,28,.3)}
+  .fomo-item .x{color:#ff7a8a;font-size:18px;flex-shrink:0;line-height:1.4}
+  .fomo-item .ft{font-weight:600;font-size:15px;color:var(--txt)}
+  .fomo-item .fd{color:var(--txt-dim);font-size:13.5px;margin-top:3px}
+  .fomo-turn{margin-top:22px;font-size:15.5px;color:var(--txt)}
+  .fomo-turn strong{color:var(--acc)}
+
   /* ---------- STAT STRIP ---------- */
   .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(14,22,40,.6),rgba(8,12,22,.6))}
+  .stats-title{text-align:center;padding:46px 28px 6px}
+  .stats-title .sec-tag{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-2);margin-bottom:14px;display:inline-block;border:1px solid var(--line-2);border-radius:999px;padding:7px 15px;background:rgba(107,140,255,.06)}
+  .stats-title h2{font-size:clamp(26px,3.4vw,38px);font-family:'Fraunces',serif;font-weight:500}
+  .stats-title h2 em{font-style:italic;color:var(--acc)}
+  .stats-title p{color:var(--txt-dim);font-size:16px;margin:14px auto 0;max-width:620px}
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
   @media(max-width:820px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:460px){.stats-grid{grid-template-columns:1fr}}
@@ -313,8 +333,34 @@
   </div>
 </header>
 
+<!-- FOMO / DO NOTHING -->
+<div class="fomo">
+  <div class="wrap">
+    <div class="fomo-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color:#ff7a8a;border-color:rgba(255,122,138,.3);background:rgba(255,122,138,.06)">The Cost of Waiting</span>
+        <h2>What happens if you <em>do nothing?</em></h2>
+        <p class="fomo-lead">The AI economy is forming around customer data right now. Brands that don't build the bridge don't stay still — they fall behind.</p>
+      </div>
+      <div class="reveal">
+        <div class="fomo-list">
+          <div class="fomo-item"><span class="x">✕</span><div><div class="ft">Your customers' data gets claimed by someone else</div><div class="fd">If you don't help them own their data, another platform will — and inherit the relationship you spent years building.</div></div></div>
+          <div class="fomo-item"><span class="x">✕</span><div><div class="ft">Your audience stays fragmented and untapped</div><div class="fd">The intelligence sitting across your CRM, forms, and the open web keeps decaying instead of compounding into value.</div></div></div>
+          <div class="fomo-item"><span class="x">✕</span><div><div class="ft">You miss the recurring revenue window</div><div class="fd">Vault subscriptions, AI Twins, and AI-to-AI commerce become table stakes — early movers set the terms.</div></div></div>
+        </div>
+        <p class="fomo-turn">The brands that act now turn their audience into <strong>owned intelligence</strong> — and own the relationship for the next internet.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- STATS -->
 <div class="stats">
+  <div class="stats-title reveal">
+    <span class="sec-tag">About Audience Vaults</span>
+    <h2>Built on data that covers <em>virtually every U.S. adult</em></h2>
+    <p>Every Audience Vault is powered by deep identity intelligence. Here's the scale behind it.</p>
+  </div>
   <div class="wrap"><div class="stats-grid">
     <div class="stat reveal"><div class="num">99%+</div><div class="lab">U.S. Adult Reach Potential</div><div class="desc">Identity intelligence covering virtually the entire U.S. adult population.</div></div>
     <div class="stat reveal"><div class="num">496</div><div class="lab">Consumer Attributes</div><div class="desc">Across 15 intelligence categories — from financial to behavioral.</div></div>
@@ -351,7 +397,7 @@
     <div class="sec-head reveal">
       <div class="sec-tag">Audience Match Assessment</div>
       <h2>See what your <em>audience is worth</em></h2>
-      <p>Bring your community into the AI economy. Acquire vault-ready records for about $1 each, then offer members their own AI Vault — packed with their internet history — for around $10/month. Adjust the inputs to see what your audience is worth.</p>
+      <p>Bring your community into the AI economy. Acquire vault-ready records for about $1 each, then offer members their own AI Vault — packed with their internet history. Adjust the inputs on the calculator below to see what your audience is worth.</p>
     </div>
     <div class="calc reveal">
       <div class="calc-inputs">
@@ -400,7 +446,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-tag">One Customer Data Layer · Many Models</div>
-      <h2>Multiple business models from <em>one</em> relationship</h2>
+      <h2>Create multiple business models from <em>Audience Vaults</em></h2>
       <p>Audience Vaults isn't a single campaign or one-time data product. It's an AI-owned infrastructure layer that supports many revenue models from the same customer relationship.</p>
     </div>
     <div class="models">
@@ -424,7 +470,7 @@
     <div class="sec-head reveal">
       <div class="sec-tag">The Foundation</div>
       <h2>Audience intelligence <em>in the vault</em></h2>
-      <p>Before a Vault can exist, a customer must be found, understood, and connected. The Super Identity Graph (SIG) is the identity layer powering every Audience Vault.</p>
+      <p>AiFi Audience Vaults are packed with historical and real-time data called the Super Identity Graph, or SIG. SIG is the identity layer powering every vault, and includes the following:</p>
     </div>
     <div class="sig">
       <div class="reveal">
@@ -464,8 +510,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-tag">From Digital Behavior to Real-Time Vault Activation</div>
-      <h2>Reach the right customer at the <em>right moment</em></h2>
-      <p>Every day, consumers generate signals across the digital world. Those signals are continuously matched back to the identity graph, creating a living view of customer intent, timing, and relevance — then a path into their own data.</p>
+      <h2>Build stronger relationships with the right customer at the <em>right moment</em></h2>
+      <p>Every day, your customers, members, and followers generate signals across the digital world. Those signals are continuously matched back to the identity graph, creating a living view of customer intent, timing, and relevance — then a path into their own data.</p>
     </div>
     <div class="flow">
       <div class="flow-card reveal">
@@ -498,8 +544,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-tag">How It Works</div>
-      <h2>The brand becomes the <em>bridge</em></h2>
-      <p>A practical path from fragmented data to a trusted, customer-owned AI vault — and into the AI economy.</p>
+      <h2>Your brand becomes a <em>bridge</em></h2>
+      <p>Listed below is a practical path from fragmented data to a trusted, customer-owned AI vault — and into the AI economy.</p>
     </div>
     <div class="steps six">
       <div class="step reveal"><div class="n">1</div><h3>Identify</h3><p>Resolve and enrich audience records using the Audience Intelligence layer.</p></div>
@@ -572,7 +618,7 @@
     $('convV').textContent = Math.round(conv*100) + '%';
 
     const vaults = size * conv;             // vaults activated
-    const cost = vaults * price;            // cost to acquire records (≈$1/record)
+    const cost = size * price;              // cost to acquire ALL records: $/record × audience size
     const monthly = vaults * sub;           // monthly subscription revenue
     const yearly = monthly * 12;            // annual subscription revenue
     const net = yearly - cost;              // net first-year value
